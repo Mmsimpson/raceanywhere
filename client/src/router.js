@@ -10,8 +10,8 @@ let Router = () =>
         <div>
             <Switch>
                 <Route exact path="/" component={Homepage} />
-                {/* <Route exact path="/login" component={LoginScreen} />
-                <Route exact path="/signup" component={SignupScreen} />  */}
+                <Route exact path="/login" component={LoginScreen} />
+                <Route exact path="/signup" component={SignupScreen} /> 
                 <Route path="*" component={NotFound} />
             </Switch>
         </div>
