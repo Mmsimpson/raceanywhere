@@ -1,7 +1,10 @@
 import { createStore } from 'redux';
 import reducer from './reducer';
 
+let initialState = {
+    currentUser: {id: 1, userName: 'testuser'}
 
+};
 
 let store = createStore(
     reducer,
