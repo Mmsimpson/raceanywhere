@@ -6,7 +6,9 @@ class SignupForm extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: ''
+            email: '',
+            first:'', 
+            last:''
         }
     }
 
@@ -34,7 +36,7 @@ class SignupForm extends React.Component {
                         <input 
                             type="text" 
                             className="signup-input" 
-                            placeholder="username"
+                            placeholder="Username"
                             value={this.state.username}
                             onChange={ (event)  => {
                                 this.setState({ username: event.target.value })
@@ -43,7 +45,7 @@ class SignupForm extends React.Component {
                         <input
                             type='password'
                             className='signup-form-input'
-                            placeholder='password'
+                            placeholder='Password'
                             value={this.state.password}
                             onChange={ (event)  => {
                                 this.setState({ password: event.target.value })
@@ -52,10 +54,28 @@ class SignupForm extends React.Component {
                         <input
                             type='email'
                             className='signup-form-input'
-                            placeholder='email'
+                            placeholder='Email'
                             value={this.state.email}
                             onChange={ (event)  => {
                                 this.setState({ email: event.target.value })
+                                }}
+                        />
+                        <input
+                            type='text'
+                            className='signup-form-input'
+                            placeholder='First Name'
+                            value={this.state.first}
+                            onChange={ (event)  => {
+                                this.setState({ first: event.target.value })
+                                }}
+                        />
+                        <input
+                            type='text'
+                            className='signup-form-input'
+                            placeholder='Last Name'
+                            value={this.state.last}
+                            onChange={ (event)  => {
+                                this.setState({ last: event.target.value })
                                 }}
                         />
                         <button 
