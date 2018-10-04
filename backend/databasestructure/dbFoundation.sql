@@ -6,3 +6,13 @@ CREATE TABLE users (
     first character varying (200),
     last character varying (200)
 );
+
+CREATE TABLE videos (
+    id serial primary key,
+    river character varying (200),
+    riverlevel CHARACTER varying (200),
+    racetime integer varying (200),
+    class CHARACTER varying (200),
+    video CHARACTER varying (255),
+    userid integer REFERENCES users(id)
+);
