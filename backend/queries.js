@@ -16,7 +16,7 @@ let createUser = (username, password, email, first, last) => {
 } 
 
 let addUserVideo = (userid, video, river, riverlevel, racetime, classvalue) => {
-    return db.query(`INSERT INTO videos (userid, video, river, riverlevel, racetime, class) values ($1, $2, $3, $4, $5, $6) RETURNING *;`, [userid, video, river, riverlevel, racetime, classvalue])
+    return db.one(`INSERT INTO videos (userid, video, river, riverlevel, racetime, classvalue) values ($1, $2, $3, $4, $5, $6) RETURNING *;`, [userid, video, river, riverlevel, racetime, classvalue])
 }
 
 

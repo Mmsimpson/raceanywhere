@@ -11,8 +11,8 @@ CREATE TABLE videos (
     id serial primary key,
     river character varying (200),
     riverlevel CHARACTER varying (200),
-    racetime integer varying (200),
-    class CHARACTER varying (200),
+    racetime INTEGER,
+    classvalue CHARACTER varying (200),
     video CHARACTER varying (255),
     userid integer REFERENCES users(id)
 );

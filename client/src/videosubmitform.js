@@ -28,7 +28,8 @@ class VideoSubmit extends React.Component {
 
             fetch('http://localhost:5000/videoupload', {
             method: 'POST', 
-            body: videoFormData
+            body: videoFormData, 
+            
         })
 
             // .then(response => {
