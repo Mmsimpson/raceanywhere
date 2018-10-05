@@ -68,7 +68,7 @@ class LoginScreen extends React.Component {
                     this.setState({password: event.target.value})
                 }} />
 
-                <button type="submit" to="/users/1"> 
+                <button type="submit"> 
                 Go to Dashboard
                 </button>
             </form>

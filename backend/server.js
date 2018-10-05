@@ -6,8 +6,14 @@ const bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 const cors = require('cors');
 const dbq = require('./queries.js');
+ex.use(bodyParser.json({limit:'50mb'}))
+ex.use(express.static('./videos'));
+ex.use(express.static('../client/build'));
+ex.use(bodyParser.urlencoded({extended:true, limit:'50mb'}));
 ex.use(cors());
 ex.use(jsonParser);
+let multer = require('multer');
+let upload = multer({dest: './videos'});
 
 let newUser = (req, res) => {
     console.log(req.body)
@@ -20,6 +26,26 @@ let newUser = (req, res) => {
             res.send({ error: err });
         });
     };
+
+
+
+let videoPost = (req, res)  =>  {
+    console.log("DOWNHERE")
+    console.log(req.body);
+    let userid = req.body.id;
+    let river = req.body.river;
+    let riverlevel = req.body.riverlevel;
+    let racetime = req.body.racetime;
+    let classvalue = req.body.classvalue;
+    let videoFile = req.body.video;
+    //console.log(req.file.filename)
+    dbq.addUserVideo(userid, req.file.filename, river, riverlevel, racetime, classvalue)
+    .then(data => {
+        console.log(data)
+        res.send(data)  
+    })
+}
+
 let validateToken = (req, res) => {
     let responseObject = {response: null,
                             payload: null}
@@ -68,7 +94,7 @@ let createToken = (req, res) => {
         }).catch(error=> res.send({response: "bad login"}));
     };
 
-
+ex.post("/videoupload", upload.single('video'), videoPost)  
 ex.post('/checktoken', validateToken);
 ex.post('/login', createToken);
 ex.post('/signup', newUser);
