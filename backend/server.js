@@ -27,9 +27,7 @@ let newUser = (req, res) => {
         });
     };
 
-
-
-let videoPost = (req, res)  =>  {
+let createVideo = (req, res)  =>  {
     console.log("DOWNHERE")
     console.log(req.body);
     let userid = req.body.id;
@@ -46,29 +44,30 @@ let videoPost = (req, res)  =>  {
     })
 }
 
-let validateToken = (req, res) => {
-    let responseObject = {response: null,
-                            payload: null}
-    let token = req.body.webtoken
-    let isValid;
-    let payload;
-    try {
-            let decoded = jwt.verify(token, priv.signature, {"alg": "HS256", "typ": "JWT"});
-            isValid = true;
-            req.user = decoded.payload;
-            responseObject.payload = payload;
-    } catch (err) {
-            isValid = false;
-    }
-        //creates a new property for the request object, called user
-    if (isValid) {
-        responseObject.response = "Logged in";
-        res.send(responseObject);
-    } else {
-        responseObject.response = "Invalid login";
-        res.send(responseObject);
-    }
-}
+// let validateToken = (req, res) => {
+//     let responseObject = {response: null,
+//                             payload: null}
+//     let token = req.body.webtoken
+//     let isValid;
+//     let payload;
+//     try {
+//             let decoded = jwt.verify(token, priv.signature, {"alg": "HS256", "typ": "JWT"});
+//             isValid = true;
+//             req.user = decoded.payload;
+//             responseObject.payload = payload;
+//     } catch (err) {
+//             isValid = false;
+//     }
+//         //creates a new property for the request object, called user
+//     if (isValid) {
+//         responseObject.response = "Logged in";
+//         res.send(responseObject);
+//     } else {
+//         responseObject.response = "Invalid login";
+//         res.send(responseObject);
+//     }
+// }
+
 let createToken = (req, res) => {
     let credentials = req.body;
     let password = credentials.password;
@@ -87,16 +86,48 @@ let createToken = (req, res) => {
                     JwtPassword,
                     {expiresIn: '7d'})
                     console.log(token);
+                    console.log({token: token, user: data})
                     res.send({token: token, user:data});
+                    
             } else {
                 res.send("Sorry, invalid login");
             }
         }).catch(error=> res.send({response: "bad login"}));
     };
 
-ex.post("/videoupload", upload.single('video'), videoPost)  
-ex.post('/checktoken', validateToken);
-ex.post('/login', createToken);
-ex.post('/signup', newUser);
+let getUser = (req, res) => {
+    let id = req.body.id;
+    dbq.getUserInfo(id)
+        .then(data => {
+            console.log(data)
+            res.send(data)  
+        })
+};
+
+// let createVideo = (res, req) => {
+//     let userid = req.body.id
+//     dbq.userVideos(userid)
+//         .then(data => {
+//             console.log(data)
+//             res.send(data)  
+//         })
+// };
+
+let getVideosForUser = (req, res) => {
+    let userid = req.params.id
+    dbq.userVideos(userid)
+        .then(data => {
+            console.log(data)
+            res.send(data)
+        })
+};
+
+ex.get('/users/:id/videos', getVideosForUser);
+//ex.post('/videos', createVideo);
+ex.get('/users/:id', getUser);
+ex.post('/videos', upload.single('video'), createVideo)  
+//ex.post('/checktoken', validateToken);
+ex.post('/tokens', createToken);
+ex.post('/users', newUser);
 
 ex.listen(5000);
