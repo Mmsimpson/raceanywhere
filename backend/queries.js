@@ -19,9 +19,20 @@ let addUserVideo = (userid, video, river, riverlevel, racetime, classvalue) => {
     return db.one(`INSERT INTO videos (userid, video, river, riverlevel, racetime, classvalue) values ($1, $2, $3, $4, $5, $6) RETURNING *;`, [userid, video, river, riverlevel, racetime, classvalue])
 }
 
+let getUserInfo = (id) => {
+    return db.one(`select username, email, first, last
+    FROM users
+    WHERE id = ` + id + `;`)
+}
 
+let userVideos = (userid) => {
+    return db.query(`select * 
+    FROM videos
+    WHERE userid = ` + userid + `;`)
+}
 
-
+exports.userVideos = userVideos;
+exports.getUserInfo = getUserInfo;
 exports.usernameLogin = usernameLogin;
 exports.createUser = createUser;
 exports.addUserVideo = addUserVideo;

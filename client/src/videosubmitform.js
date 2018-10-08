@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class VideoSubmit extends React.Component {
     constructor(props) {
@@ -12,11 +14,8 @@ class VideoSubmit extends React.Component {
         }
     }
 
-
     render() {
         
-        
-
         let addVideo = () => {
 
             let videoFormData = new FormData()
@@ -26,19 +25,21 @@ class VideoSubmit extends React.Component {
             videoFormData.append('classvalue', this.state.classvalue)
             videoFormData.append('video', this.state.video)
 
-            fetch('http://localhost:5000/videoupload', {
+            fetch(`http://localhost:5000/users/${this.props.currentUser.id}/videos`, {
             method: 'POST', 
             body: videoFormData, 
-            
-        })
-
+            })
+            // .then(data => {
+            //     this.props.history.push('/myaccount')
+            // })
             // .then(response => {
             //     return response.json()
-            // })
-            
+            // })  
         }
 
         return <div>
+
+
             <form className="videosubmit-form" onSubmit={(event) => {
                 event.preventDefault();
                 addVideo()}}>
@@ -83,14 +84,16 @@ class VideoSubmit extends React.Component {
                         this.setState({ video: event.target.files[0] })}}
                 />
                 <button 
-                            className='signup-form-submit' 
-                            type='submit'>Submit video
-                        </button>
+                    className='signup-form-submit' 
+                    type='submit'>Submit video
+                </button>
             </form>
-
+            <NavLink to={`/users/${this.props.currentUser.id}`}>
+                <button className="videoscrbtn">Back to My Profile</button>
+            </NavLink>
 
         </div>
     }
 }
 
-export default VideoSubmit;
+export default connect(state => state)(VideoSubmit)
