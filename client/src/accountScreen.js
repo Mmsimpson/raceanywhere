@@ -1,0 +1,61 @@
+import React from 'react';
+import NavBar from './navbar.js';
+import Appheader from './appheader.js';
+import VideoList from './videoList.js';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+
+// smart component
+class AccountScreen extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            videos:[]
+    }}
+
+    componentDidMount() {
+        fetch(`http://localhost:5000/users/${this.props.currentUser.id}/videos`)
+            .then(res => res.json())
+            .then(videos => {
+                this.props.dispatch({
+                    type:'LOAD_VIDEOS',
+                    videos: videos
+                })
+            })
+        }   
+        // fetch('http://localhost:5000/uservideos',{
+        //     method: 'POST',
+        //     body: JSON.stringify(this.state),
+        //     headers:{"Content-Type": "application/json"
+        //     }})
+        //     .then(data => {
+        //         return data.json()
+        //     })     
+        //     .then(data => {
+        //         this.setState({
+        //            videos: data 
+        //         })
+        //     })
+    
+        
+    render() {
+
+        return  <div>
+                    <Appheader />
+                    <NavBar />
+                    <div> 
+                        <h2> 
+                            Welcome to Your Account! Here you can post your video's and Time's!
+                        </h2>
+                        <NavLink to={`/users/${this.props.currentUser.id}/videos`}>
+                            <button className="videoscrbtn">Post Video</button>
+                        </NavLink>
+                    </div>
+                    <div>
+                        <VideoList videos={this.state.videos} />
+                    </div>
+
+                </div>
+    }
+}
+export default connect(state => state)(AccountScreen);

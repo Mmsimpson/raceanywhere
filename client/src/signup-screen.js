@@ -1,10 +1,10 @@
 import React from 'react';
 import SignupForm from './signup-form';
-import NavBar from './navbar';
+import AppHeader from './appheader';
 
 let SignupScreen = (props) =>
    <div>
-       <NavBar />
+       <AppHeader />
        <h2>Welcome to RaceAnywhere! Please Create an Account to get started!</h2>
        <SignupForm history={props.history} />
     </div>

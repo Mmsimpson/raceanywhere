@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-
-let NavBar = () =>
+let NavBar = (props) =>
     <div className= "navbar">
         <div className="homepage">
             <NavLink to="/">
@@ -17,8 +17,11 @@ let NavBar = () =>
             <NavLink to="/signup">
                 <button className="signupbtn">Sign up</button>
             </NavLink>
+            <NavLink to={`/users/${props.currentUser.id}`}>
+                <button className="accountbtn">My Account</button>
+            </NavLink>
             
         </div>
     </div>
 
-export default NavBar;
+export default connect(state => state)(NavBar);

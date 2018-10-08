@@ -2,7 +2,8 @@ import { createStore } from 'redux';
 import reducer from './reducer';
 
 let initialState = {
-    currentUser: {id: 1, userName: 'testuser'}
+    currentUser: JSON.parse(localStorage.getItem('user')),
+    videos: [],
 
 };
 

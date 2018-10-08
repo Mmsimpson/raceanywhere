@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import AppHeader from './appheader';
 
 class LoginScreen extends React.Component {
     constructor(props){
@@ -11,44 +12,44 @@ class LoginScreen extends React.Component {
     }
     render() {
 
-        let myStorage = window.localStorage;
+        
 
-        let checkLogin = () => {
-            fetch('http://localhost:5000/checktoken', {
-                method: 'POST',
-                body: JSON.stringify(myStorage),
-                headers: {'Content-Type': 'application/json'}
-            })
-            .then(data => {
-                return data.json()})     
-            }
+        // let checkLogin = () => {
+        //     fetch('http://localhost:5000/checktoken', {
+        //         method: 'POST',
+        //         body: JSON.stringify(myStorage),
+        //         headers: {'Content-Type': 'application/json'}
+        //     })
+        //     .then(data => {
+        //         return data.json()})     
+        //     }
             
-        checkLogin();
+        // checkLogin();
 
         let loginFetch = () => {
-            fetch('http://localhost:5000/login',{
+            fetch('http://localhost:5000/tokens',{
             method: 'POST',
             body: JSON.stringify(this.state),
             headers:{"Content-Type": "application/json"
             }})
             .then(responseObject => {
-                return    responseObject.json()
-                
+                return responseObject.json()
             })
             .then(data => {
-                // console.log(data)
-                myStorage.setItem('webtoken', data.token);
-                this.props.history.push(`/user/${data.user.id}`);
+                console.log(data)
+                window.localStorage.setItem('webtoken', data.token);
                 this.props.dispatch({
                     type: 'UPDATE_CURRENT_USER',
                     user: data.user
                 });
-                // console.log(this.state);
             })
-
+            .then(data => {
+                this.props.history.push('/')
+            })
         }
 
         return <div className="loginPage">
+            <AppHeader />
             <h1>Please Login</h1>
             <form className="loginForm"
             onSubmit={event => {
@@ -69,7 +70,7 @@ class LoginScreen extends React.Component {
                 }} />
 
                 <button type="submit"> 
-                Go to Dashboard
+                Go to Homepage
                 </button>
             </form>
         </div>
@@ -79,7 +80,7 @@ class LoginScreen extends React.Component {
 
 
 
-export default connect(state => state)(LoginScreen)
+export default connect(state => state)(LoginScreen);
 
 
 

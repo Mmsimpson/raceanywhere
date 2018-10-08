@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class SignupForm extends React.Component {
     render() {
 
         let userSignUp = () => {
-            fetch('http://localhost:5000/signup', {
+            fetch('http://localhost:5000/users', {
             method: 'POST', 
             body: JSON.stringify(this.state),
             headers: {'Content-Type': 'application/JSON'
@@ -25,7 +26,13 @@ class SignupForm extends React.Component {
             })
             .then(data => {
                 this.props.history.push('/login')
+                // this.props.dispatch({
+                //     type: 'UPDATE_CURRENT_USER',
+                //     user: data
+                // });
+                // console.log(data)
             })
+            
         }
         
         return <div>
@@ -87,4 +94,4 @@ class SignupForm extends React.Component {
         }
 };
 
-export default SignupForm;
+export default connect(state => state)(SignupForm);
