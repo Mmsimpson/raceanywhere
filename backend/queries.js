@@ -3,7 +3,7 @@ const postGres = require('./private.js');
 const db = pg(postGres.PG_LINK); 
 
 let usernameLogin = (username, password) => {
-    return db.one(`select *
+    return db.one(`select username, password, id
     FROM users
     WHERE username = '` + username + `'
     AND password = '` + password + `';`)
@@ -26,7 +26,7 @@ let getUserInfo = (id) => {
 }
 
 let userVideos = (userid) => {
-    return db.one(`select river, riverlevel, racetime, classvalue, video
+    return db.query(`select * 
     FROM videos
     WHERE userid = ` + userid + `;`)
 }

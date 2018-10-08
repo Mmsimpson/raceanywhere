@@ -30,7 +30,7 @@ let newUser = (req, res) => {
 let createVideo = (req, res)  =>  {
     console.log("DOWNHERE")
     console.log(req.body);
-    let userid = req.body.id;
+    let userid = req.params.id;
     let river = req.body.river;
     let riverlevel = req.body.riverlevel;
     let racetime = req.body.racetime;
@@ -114,18 +114,19 @@ let getUser = (req, res) => {
 // };
 
 let getVideosForUser = (req, res) => {
-    let userid = req.params.id
-    dbq.userVideos(userid)
+    dbq.userVideos(req.params.id)
         .then(data => {
             console.log(data)
             res.send(data)
+        }).catch(err => {
+            res.send({error: err});
         })
-};
+};  
 
 ex.get('/users/:id/videos', getVideosForUser);
 //ex.post('/videos', createVideo);
 ex.get('/users/:id', getUser);
-ex.post('/videos', upload.single('video'), createVideo)  
+ex.post('/users/:id/videos', upload.single('video'), createVideo)  
 //ex.post('/checktoken', validateToken);
 ex.post('/tokens', createToken);
 ex.post('/users', newUser);
