@@ -17,7 +17,6 @@ class VideoSubmit extends React.Component {
     render() {
         
         let addVideo = () => {
-
             let videoFormData = new FormData()
             videoFormData.append('river', this.state.river)
             videoFormData.append('riverlevel', this.state.riverlevel)
@@ -29,16 +28,9 @@ class VideoSubmit extends React.Component {
             method: 'POST', 
             body: videoFormData, 
             })
-            // .then(data => {
-            //     this.props.history.push('/myaccount')
-            // })
-            // .then(response => {
-            //     return response.json()
-            // })  
         }
 
         return <div>
-
 
             <form className="videosubmit-form" onSubmit={(event) => {
                 event.preventDefault();

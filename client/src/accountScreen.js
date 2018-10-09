@@ -23,23 +23,8 @@ class AccountScreen extends React.Component {
                 })
             })
         }   
-        // fetch('http://localhost:5000/uservideos',{
-        //     method: 'POST',
-        //     body: JSON.stringify(this.state),
-        //     headers:{"Content-Type": "application/json"
-        //     }})
-        //     .then(data => {
-        //         return data.json()
-        //     })     
-        //     .then(data => {
-        //         this.setState({
-        //            videos: data 
-        //         })
-        //     })
-    
-        
+       
     render() {
-
         return  <div>
                     <Appheader />
                     <NavBar />
@@ -52,7 +37,7 @@ class AccountScreen extends React.Component {
                         </NavLink>
                     </div>
                     <div>
-                        <VideoList videos={this.state.videos} />
+                        <VideoList videos={this.props.videos} />
                     </div>
 
                 </div>

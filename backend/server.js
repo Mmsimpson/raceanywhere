@@ -7,7 +7,7 @@ var jsonParser = bodyParser.json();
 const cors = require('cors');
 const dbq = require('./queries.js');
 ex.use(bodyParser.json({limit:'50mb'}))
-ex.use(express.static('./videos'));
+ex.use('/uploads',express.static('./videos'));
 ex.use(express.static('../client/build'));
 ex.use(bodyParser.urlencoded({extended:true, limit:'50mb'}));
 ex.use(cors());
@@ -44,30 +44,6 @@ let createVideo = (req, res)  =>  {
     })
 }
 
-// let validateToken = (req, res) => {
-//     let responseObject = {response: null,
-//                             payload: null}
-//     let token = req.body.webtoken
-//     let isValid;
-//     let payload;
-//     try {
-//             let decoded = jwt.verify(token, priv.signature, {"alg": "HS256", "typ": "JWT"});
-//             isValid = true;
-//             req.user = decoded.payload;
-//             responseObject.payload = payload;
-//     } catch (err) {
-//             isValid = false;
-//     }
-//         //creates a new property for the request object, called user
-//     if (isValid) {
-//         responseObject.response = "Logged in";
-//         res.send(responseObject);
-//     } else {
-//         responseObject.response = "Invalid login";
-//         res.send(responseObject);
-//     }
-// }
-
 let createToken = (req, res) => {
     let credentials = req.body;
     let password = credentials.password;
@@ -99,24 +75,13 @@ let getUser = (req, res) => {
     let id = req.body.id;
     dbq.getUserInfo(id)
         .then(data => {
-            console.log(data)
             res.send(data)  
         })
 };
 
-// let createVideo = (res, req) => {
-//     let userid = req.body.id
-//     dbq.userVideos(userid)
-//         .then(data => {
-//             console.log(data)
-//             res.send(data)  
-//         })
-// };
-
 let getVideosForUser = (req, res) => {
     dbq.userVideos(req.params.id)
         .then(data => {
-            console.log(data)
             res.send(data)
         }).catch(err => {
             res.send({error: err});
