@@ -12,20 +12,6 @@ class LoginScreen extends React.Component {
     }
     render() {
 
-        
-
-        // let checkLogin = () => {
-        //     fetch('http://localhost:5000/checktoken', {
-        //         method: 'POST',
-        //         body: JSON.stringify(myStorage),
-        //         headers: {'Content-Type': 'application/json'}
-        //     })
-        //     .then(data => {
-        //         return data.json()})     
-        //     }
-            
-        // checkLogin();
-
         let loginFetch = () => {
             fetch('http://localhost:5000/tokens',{
             method: 'POST',

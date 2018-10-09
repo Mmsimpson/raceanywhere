@@ -26,11 +26,6 @@ class SignupForm extends React.Component {
             })
             .then(data => {
                 this.props.history.push('/login')
-                // this.props.dispatch({
-                //     type: 'UPDATE_CURRENT_USER',
-                //     user: data
-                // });
-                // console.log(data)
             })
             
         }
