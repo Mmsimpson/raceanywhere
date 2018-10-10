@@ -4,7 +4,7 @@ let RaceInformation = () =>
     <div className="info"> 
         <h2>Race Information</h2>
         <div className="why-us">
-            
+            <img className="usimg" src="/images/P7190100(2).jpg" />
         </div>
         <div className="venues">
 

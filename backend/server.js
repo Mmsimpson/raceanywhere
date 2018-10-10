@@ -9,7 +9,7 @@ var jsonParser = bodyParser.json();
 const cors = require('cors');
 const dbq = require('./queries.js');
 ex.use(bodyParser.json({limit:'50mb'}))
-ex.use('/uploads',express.static('./videos'));
+ex.use('/api/uploads',express.static('./videos'));
 ex.use(express.static('../client/build'));
 ex.use(bodyParser.urlencoded({extended:true, limit:'50mb'}));
 ex.use(cors());
@@ -70,7 +70,7 @@ let createToken = (req, res) => {
             } else {
                 res.send("Sorry, invalid login");
             }
-        }).catch(error=> res.send({response: "bad login"}));
+        }).catch(error=> {console.log(error); res.send({response: "bad login"})});
     };
 
 let getUser = (req, res) => {
