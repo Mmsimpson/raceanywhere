@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const jwt = require('jsonwebtoken');
 const express = require('express');
 const ex = express();
@@ -88,12 +90,10 @@ let getVideosForUser = (req, res) => {
         })
 };  
 
-ex.get('/users/:id/videos', getVideosForUser);
-//ex.post('/videos', createVideo);
-ex.get('/users/:id', getUser);
-ex.post('/users/:id/videos', upload.single('video'), createVideo)  
-//ex.post('/checktoken', validateToken);
-ex.post('/tokens', createToken);
-ex.post('/users', newUser);
+ex.get('/api/users/:id/videos', getVideosForUser);
+ex.get('/api/users/:id', getUser);
+ex.post('/api/users/:id/videos', upload.single('video'), createVideo)  
+ex.post('/api/tokens', createToken);
+ex.post('/api/users', newUser);
 
 ex.listen(5000);

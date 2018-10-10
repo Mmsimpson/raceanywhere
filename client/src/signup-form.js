@@ -16,7 +16,7 @@ class SignupForm extends React.Component {
     render() {
 
         let userSignUp = () => {
-            fetch('http://localhost:5000/users', {
+            fetch(`${process.env.REACT_APP_FETCHREQ}/users`, {
             method: 'POST', 
             body: JSON.stringify(this.state),
             headers: {'Content-Type': 'application/JSON'

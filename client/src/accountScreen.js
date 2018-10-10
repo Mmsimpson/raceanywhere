@@ -5,6 +5,7 @@ import VideoList from './videoList.js';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
+
 // smart component
 class AccountScreen extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class AccountScreen extends React.Component {
     }}
 
     componentDidMount() {
-        fetch(`http://localhost:5000/users/${this.props.currentUser.id}/videos`)
+        fetch(`${process.env.REACT_APP_FETCHREQ}/users/${this.props.currentUser.id}/videos`)
             .then(res => res.json())
             .then(videos => {
                 this.props.dispatch({

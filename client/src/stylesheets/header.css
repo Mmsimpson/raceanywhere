@@ -1,0 +1,10 @@
+.appHeader {
+    align-self: center;
+}
+
+.img {
+    padding: 15px;
+    max-width: 100%;
+    border: 5px;
+    border: color rgb(47, 125, 174);
+}

@@ -13,7 +13,7 @@ class LoginScreen extends React.Component {
     render() {
 
         let loginFetch = () => {
-            fetch('http://localhost:5000/tokens',{
+            fetch(`${process.env.REACT_APP_FETCHREQ}/tokens`,{
             method: 'POST',
             body: JSON.stringify(this.state),
             headers:{"Content-Type": "application/json"
