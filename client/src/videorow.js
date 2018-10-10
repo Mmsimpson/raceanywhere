@@ -8,7 +8,7 @@ let VideoRow = (props) =>
         // }} */}
         <video
             controls
-            src={`http://localhost:5000/uploads/${props.video.video}`} >
+            src={`${process.env.REACT_APP_FETCHREQ}/uploads/${props.video.video}`} >
             
         </video>
         <p> {props.video.river} </p>

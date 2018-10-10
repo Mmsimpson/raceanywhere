@@ -24,7 +24,7 @@ class VideoSubmit extends React.Component {
             videoFormData.append('classvalue', this.state.classvalue)
             videoFormData.append('video', this.state.video)
 
-            fetch(`http://localhost:5000/users/${this.props.currentUser.id}/videos`, {
+            fetch(`${process.env.REACT_APP_FETCHREQ}/users/${this.props.currentUser.id}/videos`, {
             method: 'POST', 
             body: videoFormData, 
             })

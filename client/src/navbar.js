@@ -1,24 +1,25 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './stylesheets/navbar.css';
 
 let NavBar = (props) =>
     <div className= "navbar">
-        <div className="homepage">
+        <div className="navbtn">
             <NavLink to="/">
-                <button className="homebtn">Home</button>
+                <button className="btn">Home</button>
             </NavLink>
             <NavLink to="/whyraceanywhere">
-                <button className="why-us">Why Race Anywhere</button>
+                <button className="btn">Why Race Anywhere</button>
             </NavLink>
             <NavLink to="/login">
-                <button className="loginbtn">Login</button>
+                <button className="btn">Login</button>
             </NavLink>
             <NavLink to="/signup">
-                <button className="signupbtn">Sign up</button>
+                <button className="btn">Sign up</button>
             </NavLink>
             <NavLink to={`/users/${props.currentUser.id}`}>
-                <button className="accountbtn">My Account</button>
+                <button className="btn">My Account</button>
             </NavLink>
             
         </div>
