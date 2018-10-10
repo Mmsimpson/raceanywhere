@@ -16,6 +16,7 @@ class SignupForm extends React.Component {
     render() {
 
         let userSignUp = () => {
+            console.log(`${process.env.REACT_APP_FETCHREQ}/users`)
             fetch(`${process.env.REACT_APP_FETCHREQ}/users`, {
             method: 'POST', 
             body: JSON.stringify(this.state),
