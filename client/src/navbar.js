@@ -18,9 +18,13 @@ let NavBar = (props) =>
             <NavLink to="/signup">
                 <button className="btn">Sign up</button>
             </NavLink>
+            
+            {props.currentUser ? 
             <NavLink to={`/users/${props.currentUser.id}`}>
                 <button className="btn">My Account</button>
             </NavLink>
+            : <span> </span>
+            } 
             
         </div>
     </div>
