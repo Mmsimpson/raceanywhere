@@ -1,0 +1,19 @@
+.vid {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+    background-color: black;
+}
+
+.info-container {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    background-color: azure;
+}
+
+.video-feed {
+    list-style: none;
+    background-color: rgb(53, 140, 195);
+}

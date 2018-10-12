@@ -1,0 +1,25 @@
+.vid-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* width: 40%; */
+    background: radial-gradient(circle, rgba(202,233,241,1) 18%, rgba(167,170,194,1) 93%);
+    /* border-radius: 1em; */
+    pointer-events: none; 
+    transition: .3s ease-in-out; 
+}
+
+input {
+    align-content: center;
+    padding: 4px;
+    border-radius: 1em;
+}
+
+.videosubmit-btn {
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
