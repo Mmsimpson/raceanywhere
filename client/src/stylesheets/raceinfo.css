@@ -1,0 +1,48 @@
+.info-main {
+    margin: 15px;
+}
+
+.info-header {
+    text-align: center;
+    color: rgb(59, 154, 213);
+    font-family: 'Squada One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.pic-div {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.why-us {
+    background-image: url('/images/_DSC7034.JPG') 
+}
+
+.venues {
+    background-image: url('/images/_DSC2949.jpg')
+}
+.profiles {
+    background-image: url('/images/_DSC7122.JPG')
+}
+
+.text {
+    font-size: 20px;
+    font-family: 'Squada One', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.info {
+    flex: 1;
+    margin: .7em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6em 3em;
+}
+
