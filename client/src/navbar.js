@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './stylesheets/navbar.css';
 
+
+
 let NavBar = (props) =>
     <div className= "navbar">
         <div className="navbtn">

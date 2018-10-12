@@ -1,0 +1,23 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    line-height: 1.5;
+
+}
+.guideline {
+    background-color: rgb(53, 140, 195);
+}
+
+
+
+.paragraph{
+    text-align: center;
+    
+    
+}

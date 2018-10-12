@@ -1,7 +1,12 @@
 .navbar {
+    display: flex;
+    justify-content: center;
     align-self: center;
+    background-color: black;
 }
+
 .btn {
+    color: white;
     font-family: 'Squada One', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
@@ -11,4 +16,8 @@
     padding:0;
     cursor: pointer;
     margin: 13px;
+}
+
+.btn:hover {
+    color: rgb(59, 154, 213);
 }
