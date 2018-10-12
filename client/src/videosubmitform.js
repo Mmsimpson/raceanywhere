@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
+import './stylesheets/vid_form.css';
 
 class VideoSubmit extends React.Component {
     constructor(props) {
@@ -30,61 +31,59 @@ class VideoSubmit extends React.Component {
             })
         }
 
-        return <div>
+        return <div className="vid-form">
+                    <form className="videosubmit-form" onSubmit={(event) => {
+                        event.preventDefault();
+                        addVideo()}}>
 
-            <form className="videosubmit-form" onSubmit={(event) => {
-                event.preventDefault();
-                addVideo()}}>
-
-                <input 
-                    type="text" 
-                    className="river-input" 
-                    placeholder="River or Section Raced"
-                    value={this.state.river}
-                    onChange={ (event)  => {
-                        this.setState({ river: event.target.value })}}
-                />
-                <input 
-                    type="text" 
-                    className="level-input" 
-                    placeholder="Level (or correlating guage)"
-                    value={this.state.riverlevel}
-                    onChange={ (event)  => {
-                        this.setState({ riverlevel: event.target.value })}}
-                />
-                <input 
-                    type="text" 
-                    className="time-input" 
-                    placeholder="Race Time (will be confirmed)"
-                    value={this.state.racetime}
-                    onChange={ (event)  => {
-                        this.setState({ racetime: event.target.value })}}
-                />
-                <input 
-                    type="text" 
-                    className="class-input" 
-                    placeholder="Class (Men, Women, Junior, Transgender, etc.) (K1 Short, K1 Long, OC1, SUP, BELLY YAK, TRASH CAN, etc.)"
-                    value={this.state.classvalue}
-                    onChange={ (event)  => {
-                        this.setState({ classvalue: event.target.value })}}
-                />
-                <input 
-                    type="file" 
-                    className="videofile-input" 
-                    placeholder="Select video to upload"
-                    onChange={ (event)  => {
-                        this.setState({ video: event.target.files[0] })}}
-                />
-                <button 
-                    className='signup-form-submit' 
-                    type='submit'>Submit video
-                </button>
-            </form>
-            <NavLink to={`/users/${this.props.currentUser.id}`}>
-                <button className="videoscrbtn">Back to My Profile</button>
-            </NavLink>
-
-        </div>
+                        <input 
+                            type="text" 
+                            className="river-input" 
+                            placeholder="River or Section Raced"
+                            value={this.state.river}
+                            onChange={ (event)  => {
+                                this.setState({ river: event.target.value })}}
+                        />
+                        <input 
+                            type="text" 
+                            className="level-input" 
+                            placeholder="Level (or correlating guage)"
+                            value={this.state.riverlevel}
+                            onChange={ (event)  => {
+                                this.setState({ riverlevel: event.target.value })}}
+                        />
+                        <input 
+                            type="text" 
+                            className="time-input" 
+                            placeholder="Race Time (will be confirmed)"
+                            value={this.state.racetime}
+                            onChange={ (event)  => {
+                                this.setState({ racetime: event.target.value })}}
+                        />
+                        <input 
+                            type="text" 
+                            className="class-input" 
+                            placeholder="Class (Men, Women, Junior, Transgender, etc.) (K1 Short, K1 Long, OC1, SUP, BELLY YAK, TRASH CAN, etc.)"
+                            value={this.state.classvalue}
+                            onChange={ (event)  => {
+                                this.setState({ classvalue: event.target.value })}}
+                        />
+                        <input 
+                            type="file" 
+                            className="videofile-input" 
+                            placeholder="Select video to upload"
+                            onChange={ (event)  => {
+                                this.setState({ video: event.target.files[0] })}}
+                        />
+                        <button 
+                            className='videosubmit-btn' 
+                            type='submit'>Submit video
+                        </button>
+                    </form>
+                    <NavLink to={`/users/${this.props.currentUser.id}`}>
+                        <button className="videoscrbtn">Back to My Profile</button>
+                    </NavLink>
+                </div>
     }
 }
 

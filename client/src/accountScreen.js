@@ -4,6 +4,7 @@ import Appheader from './appheader.js';
 import VideoList from './videoList.js';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import './stylesheets/account-scr.css';
 
 
 // smart component
