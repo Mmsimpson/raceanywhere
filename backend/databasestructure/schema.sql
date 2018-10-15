@@ -14,5 +14,6 @@ CREATE TABLE videos (
     racetime INTEGER,
     classvalue CHARACTER varying (200),
     video CHARACTER varying (255),
-    userid integer REFERENCES users(id)
+    userid integer REFERENCES users(id),
+    dateadded TIMESTAMP
 );

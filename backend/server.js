@@ -90,6 +90,15 @@ let getVideosForUser = (req, res) => {
         })
 };  
 
+let getRacerProfileVideos = (req, res) => {
+    dbq.recentVideos()
+        .then(data => {
+            res.send(data)
+        })
+}
+
+
+ex.get('/api/videos', getRacerProfileVideos)
 ex.get('/api/users/:id/videos', getVideosForUser);
 ex.get('/api/users/:id', getUser);
 ex.post('/api/users/:id/videos', upload.single('video'), createVideo)  

@@ -5,6 +5,10 @@ let updateCurrentUser = (oldState, action) => {
     return {...oldState, currentUser: newUser};
 };
 
+let loadRecentVideos = (oldState, action) => {
+    return {...oldState, recentVideos: action.recentVideos}
+}
+
 let loadVideos = (oldState, action) => {
     return {...oldState, videos: action.videos};
 }
@@ -12,6 +16,7 @@ let loadVideos = (oldState, action) => {
 let reducers = {
     'UPDATE_CURRENT_USER': updateCurrentUser,
     'LOAD_VIDEOS': loadVideos,
+    'LOAD_RECENT_VIDEOS': loadRecentVideos,
 };
 
 let reducer = (oldState, action) => {

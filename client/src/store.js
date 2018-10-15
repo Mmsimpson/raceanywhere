@@ -4,6 +4,7 @@ import reducer from './reducer';
 let initialState = {
     currentUser: JSON.parse(localStorage.getItem('user')),
     videos: [],
+    recentVideos: []
 
 };
 

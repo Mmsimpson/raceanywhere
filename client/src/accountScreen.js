@@ -9,11 +9,6 @@ import Footer from './footer.js';
 
 // smart component
 class AccountScreen extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            videos:[]
-    }}
 
     componentDidMount() {
         fetch(`${process.env.REACT_APP_FETCHREQ}/users/${this.props.currentUser.id}/videos`)
