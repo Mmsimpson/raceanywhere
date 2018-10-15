@@ -1,3 +1,10 @@
+.userbar {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: black;
+}
+
 .btn {
     color: white;
     font-family: 'Squada One', sans-serif;

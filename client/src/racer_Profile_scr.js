@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './navbar.js';
+import UserBar from './userBar.js';
 import Appheader from './appheader.js';
 import { connect } from 'react-redux';
 import Footer from './footer.js'
@@ -21,7 +21,7 @@ class RacerProfileScreen extends React.Component {
     render() {   
         return    <div>
                 <Appheader />
-                <NavBar />
+                <UserBar />
                 <div>
                     <RacerVideoList videos={this.props.videos} user={this.props.users} />
                 </div>

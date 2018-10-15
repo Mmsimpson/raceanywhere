@@ -1,11 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './stylesheets/navbar.css';
+import './stylesheets/userbar.css';
 
-let NavBar = (props) =>
-    <div className="navbar">
+
+let UserBar = (props) => 
+    <div className= "userbar">
         <div className="navbtn">
+            <NavLink to="/">
+                <button className="btn">Home</button>
+            </NavLink>
+            <NavLink to="/whyraceanywhere">
+                <button className="btn">Why Race Anywhere</button>
+            </NavLink>
             <NavLink to="/login">
                 <button className="btn">Login</button>
             </NavLink>
@@ -22,4 +29,4 @@ let NavBar = (props) =>
         </div>
     </div>
 
-export default connect(state => state)(NavBar);
+export default connect(state => state)(UserBar);  

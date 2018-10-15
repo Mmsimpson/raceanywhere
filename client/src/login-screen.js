@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import AppHeader from './appheader';
-import Footer from './footer.js'
+import UserBar from './userBar.js';
+import Footer from './footer.js';
 
 class LoginScreen extends React.Component {
     constructor(props){
@@ -36,6 +37,7 @@ class LoginScreen extends React.Component {
 
         return <div className="loginPage">
             <AppHeader />
+            <UserBar />
             <h1>Please Login</h1>
             <form className="loginForm"
             onSubmit={event => {

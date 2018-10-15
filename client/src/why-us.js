@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './navbar.js';
+import UserBar from './userBar.js';
 import Appheader from './appheader.js';
 import './stylesheets/why-us.css';
 import Footer from './footer.js'
@@ -8,7 +8,7 @@ let WhyUs = () =>
     <div>
         <div className="header">
             <Appheader />
-            <NavBar />
+            <UserBar />
         </div>
         <section> 
             <h1>Our Mission</h1>
