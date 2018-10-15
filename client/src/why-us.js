@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './navbar.js';
 import Appheader from './appheader.js';
 import './stylesheets/why-us.css';
+import Footer from './footer.js'
 
 let WhyUs = () =>   
     <div>
@@ -31,6 +32,7 @@ let WhyUs = () =>
                 </p>
             </div>
         </section>    
+        <Footer />
     </div>
 
 export default WhyUs;

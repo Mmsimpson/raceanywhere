@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
 class SignupForm extends React.Component {
     constructor(props) {
         super(props)
@@ -16,7 +17,6 @@ class SignupForm extends React.Component {
     render() {
 
         let userSignUp = () => {
-            console.log(`${process.env.REACT_APP_FETCHREQ}/users`)
             fetch(`${process.env.REACT_APP_FETCHREQ}/users`, {
             method: 'POST', 
             body: JSON.stringify(this.state),
@@ -28,7 +28,6 @@ class SignupForm extends React.Component {
             .then(data => {
                 this.props.history.push('/login')
             })
-            
         }
         
         return <div>

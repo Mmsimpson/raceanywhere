@@ -5,7 +5,7 @@ import VideoList from './videoList.js';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './stylesheets/account-scr.css';
-
+import Footer from './footer.js';
 
 // smart component
 class AccountScreen extends React.Component {
@@ -41,7 +41,7 @@ class AccountScreen extends React.Component {
                     <div>
                         <VideoList videos={this.props.videos} />
                     </div>
-
+                    <Footer />
                 </div>
     }
 }
