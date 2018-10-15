@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import AppHeader from './appheader';
+import Footer from './footer.js'
 
 class LoginScreen extends React.Component {
     constructor(props){
@@ -22,7 +23,6 @@ class LoginScreen extends React.Component {
                 return responseObject.json()
             })
             .then(data => {
-                console.log(data)
                 window.localStorage.setItem('webtoken', data.token);
                 this.props.dispatch({
                     type: 'UPDATE_CURRENT_USER',
@@ -59,6 +59,7 @@ class LoginScreen extends React.Component {
                 Go to Homepage
                 </button>
             </form>
+            <Footer />
         </div>
     }
 }
