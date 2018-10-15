@@ -1,6 +1,6 @@
 import React from 'react'; 
 import './stylesheets/raceinfo.css';
-
+import { NavLink } from 'react-router-dom';
 
 let RaceInformation = () => 
     <div className="info-main"> 
@@ -8,8 +8,10 @@ let RaceInformation = () =>
         <div className="pic-div">
             <div className="why-us info">
                 <div className="text">
-                    <h3>Why Race Anywhere</h3>
-                    <p>View our mission, more about us, and submission guidelines</p>
+                    <NavLink to="/whyraceanywhere">
+                        <h3>Why Race Anywhere</h3>
+                        <p>View our mission, more about us, and submission guidelines</p>
+                    </NavLink>
                 </div>
             </div>
             <div className="venues info">

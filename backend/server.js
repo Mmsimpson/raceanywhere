@@ -90,6 +90,9 @@ let getVideosForUser = (req, res) => {
         })
 };  
 
+
+
+
 ex.get('/api/users/:id/videos', getVideosForUser);
 ex.get('/api/users/:id', getUser);
 ex.post('/api/users/:id/videos', upload.single('video'), createVideo)  
