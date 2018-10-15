@@ -7,12 +7,14 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import WhyUs from './why-us';
 import AccountScreen from './accountScreen'
 import SubmitScreen from './videoSubmitScreen';
+import RacerProfileScreen from './racer_Profile_scr';
 
 let Router = () =>
     <HashRouter>
         <div>
             <Switch>
                 <Route exact path="/" component={Homepage} />
+                <Route exact path="/racervideos" component={RacerProfileScreen} />
                 <Route exact path="/login" component={LoginScreen} />
                 <Route exact path="/signup" component={SignupScreen} />
                 <Route exact path="/users/:id" component={AccountScreen} /> 

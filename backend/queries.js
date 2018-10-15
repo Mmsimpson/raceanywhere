@@ -32,10 +32,11 @@ let userVideos = (userid) => {
 }
 
 let recentVideos = () => {
-    return db.query(`select * 
-    FROM videos
-    LIMIT 5
-    ORDER BY dateadded DESC;`)
+    return db.query(`select usr.username, vid.river, vid.riverlevel, vid.racetime, vid.classvalue, vid.video  
+    FROM videos vid
+    LEFT JOIN users usr ON usr.id = vid.userid
+    ORDER BY dateadded DESC
+    LIMIT 5;`)
 }
 
 
