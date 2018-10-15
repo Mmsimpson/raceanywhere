@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './navbar.js';
+import UserBar from './userBar.js';
 import Appheader from './appheader.js';
 import VideoList from './videoList.js';
 import { connect } from 'react-redux';
@@ -24,7 +24,7 @@ class AccountScreen extends React.Component {
     render() {
         return  <div>
                     <Appheader />
-                    <NavBar />
+                    <UserBar />
                     <div> 
                         <h2> 
                             Welcome to Your Account! Here you can post your video's and Time's!
