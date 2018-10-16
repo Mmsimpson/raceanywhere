@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoRow from './videorow';
+import './stylesheets/vidlist.css';
 
 let VideoList = (props) =>
     <ul className="video-feed">

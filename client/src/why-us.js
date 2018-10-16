@@ -10,7 +10,7 @@ let WhyUs = () =>
             <Appheader />
             <UserBar />
         </div>
-        <section> 
+        <section className="mission"> 
             <h1>Our Mission</h1>
             <div className="paragraph">
                 <p>

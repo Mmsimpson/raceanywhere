@@ -36,7 +36,7 @@ let recentVideos = () => {
     FROM videos vid
     LEFT JOIN users usr ON usr.id = vid.userid
     ORDER BY dateadded DESC
-    LIMIT 5;`)
+    LIMIT 6;`)
 }
 
 

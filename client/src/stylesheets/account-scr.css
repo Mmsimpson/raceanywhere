@@ -1,0 +1,50 @@
+.header-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: rgb(246, 246, 246);
+}
+
+.account-header {
+    margin-top: 35px;
+    text-align: center;
+    color:  rgb(59, 154, 213);
+    font-family: 'Squada One', sans-serif;
+    font-weight: 500;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    letter-spacing: 0.05em;
+}
+
+.header2 {
+    color:  rgb(59, 154, 213);
+    font-family: 'Squada One', sans-serif;
+    font-weight: 500;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    letter-spacing: 0.05em;
+}
+
+.post-video {
+    border-radius: 5px;
+    font-size: 19px;
+    background-color: rgb(59, 154, 213);
+    color: azure;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-family: 'Squada One', sans-serif;
+}
+
+.post-video:hover {
+    color: rgb(108, 189, 238);
+}

@@ -4,6 +4,7 @@ import Appheader from './appheader.js';
 import { connect } from 'react-redux';
 import Footer from './footer.js'
 import RacerVideoList from './racer_video_list.js';
+import './stylesheets/recentracerscr.css'
 
 class RacerProfileScreen extends React.Component {
 
@@ -19,9 +20,10 @@ class RacerProfileScreen extends React.Component {
         }   
 
     render() {   
-        return    <div>
+        return    <div className="div1">
                 <Appheader />
                 <UserBar />
+                <h1 className="recent-header">View the Latest Runs posted by other Racers</h1>
                 <div>
                     <RacerVideoList videos={this.props.videos} user={this.props.users} />
                 </div>

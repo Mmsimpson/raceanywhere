@@ -1,0 +1,24 @@
+.submission {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.guide-header {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: 'Squada One', sans-serif;
+}
+
+.guide-paragraph {
+    margin-left: 32%;
+    margin-right:32%;
+    color: rgb(94, 94, 94);
+    line-height: 1.5;
+    font-family: 'Squada One', sans-serif;
+    padding-bottom: 20px;
+    
+}

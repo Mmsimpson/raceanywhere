@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import AppHeader from './appheader';
 import UserBar from './userBar.js';
 import Footer from './footer.js';
+import './stylesheets/loginscreen.css';
 
 class LoginScreen extends React.Component {
     constructor(props){
@@ -38,26 +39,27 @@ class LoginScreen extends React.Component {
         return <div className="loginPage">
             <AppHeader />
             <UserBar />
-            <h1>Please Login</h1>
+            
             <form className="loginForm"
             onSubmit={event => {
                 event.preventDefault();
                 loginFetch()
             }}>
-                <input placeholder="Insert Username" 
+                <h1 className="login-header">Please Login</h1>
+                <input className="login-username input" placeholder="Insert Username" 
                 type="text"
                 value={this.state.username}
                 onChange={event => {
                     this.setState({username: event.target.value})
                 }} />
-                <input placeholder="Insert Password" 
+                <input className="pass input" placeholder="Insert Password" 
                 type="password"
                 value={this.state.password}
                 onChange={event => {
                     this.setState({password: event.target.value})
                 }} />
 
-                <button type="submit"> 
+                <button className="loginbtn" type="submit"> 
                 Go to Homepage
                 </button>
             </form>

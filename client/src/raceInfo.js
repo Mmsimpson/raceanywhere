@@ -23,8 +23,8 @@ let RaceInformation = () =>
             <div className="profiles info">
                 <div className="text">
                     <NavLink to="/racervideos">
-                        <h3>Racer Profiles</h3>
-                        <p>See top racers. Join the competition by submiting your own race videos</p>  
+                        <h3>Recent Racers</h3>
+                        <p>See the latest racers. Join the competition by submiting your own race videos</p>  
                     </NavLink>
                 </div>
             </div>

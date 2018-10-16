@@ -32,13 +32,14 @@ class VideoSubmit extends React.Component {
         }
 
         return <div className="vid-form">
+                    <h1 className="vidform-submit">Submit Your Race Video</h1>
                     <form className="videosubmit-form" onSubmit={(event) => {
                         event.preventDefault();
                         addVideo()}}>
 
                         <input 
                             type="text" 
-                            className="river-input" 
+                            className="vidinfo river" 
                             placeholder="River or Section Raced"
                             value={this.state.river}
                             onChange={ (event)  => {
@@ -46,7 +47,7 @@ class VideoSubmit extends React.Component {
                         />
                         <input 
                             type="text" 
-                            className="level-input" 
+                            className="vidinfo level" 
                             placeholder="Level (or correlating guage)"
                             value={this.state.riverlevel}
                             onChange={ (event)  => {
@@ -54,7 +55,7 @@ class VideoSubmit extends React.Component {
                         />
                         <input 
                             type="text" 
-                            className="time-input" 
+                            className="vidinfo time" 
                             placeholder="Race Time (will be confirmed)"
                             value={this.state.racetime}
                             onChange={ (event)  => {
@@ -62,7 +63,7 @@ class VideoSubmit extends React.Component {
                         />
                         <input 
                             type="text" 
-                            className="class-input" 
+                            className="vidinfo class" 
                             placeholder="Class (Men, Women, Junior, Transgender, etc.) (K1 Short, K1 Long, OC1, SUP, BELLY YAK, TRASH CAN, etc.)"
                             value={this.state.classvalue}
                             onChange={ (event)  => {
@@ -70,7 +71,7 @@ class VideoSubmit extends React.Component {
                         />
                         <input 
                             type="file" 
-                            className="videofile-input" 
+                            className="vidinfo videofile" 
                             placeholder="Select video to upload"
                             onChange={ (event)  => {
                                 this.setState({ video: event.target.files[0] })}}
