@@ -11,7 +11,7 @@ const dbq = require('./queries.js');
 ex.use(bodyParser.json({limit:'50mb'}))
 ex.use('/api/uploads',express.static('./videos'));
 ex.use(express.static('../client/build'));
-ex.use(bodyParser.urlencoded({extended:true, limit:'50mb'}));
+ex.use(bodyParser.urlencoded({extended:true, limit:'500mb'}));
 ex.use(cors());
 ex.use(jsonParser);
 let multer = require('multer');
