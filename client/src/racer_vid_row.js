@@ -1,17 +1,17 @@
 import React from 'react';
-// import './stylesheets/videorow.css';
+import './stylesheets/racervidrow.css';
 
 let RacerVideoRow = (props) => 
-    <li>    
-        <div>
+    <div className="video-main">    
+        <div className="vid-info">
             <div className="name">
-                <p> {props.video.username} </p>
+                <p className="recent-username"> Submitted by {props.video.username} </p>
+                <video className="vid"
+                    controls
+                    preload="auto"
+                    src={`${process.env.REACT_APP_FETCHREQ}/uploads/${props.video.video}`} >
+                </video>
             </div> 
-            <video className="vid"
-                controls
-                preload="auto"
-                src={`${process.env.REACT_APP_FETCHREQ}/uploads/${props.video.video}`} >
-            </video>
             <div className="info-container">
                 <p> {props.video.river} </p>
                 <p> {props.video.riverlevel} </p>
@@ -19,6 +19,6 @@ let RacerVideoRow = (props) =>
                 <p> {props.video.classvalue} </p>   
             </div>
         </div>
-    </li>
+    </div>
     
 export default RacerVideoRow;

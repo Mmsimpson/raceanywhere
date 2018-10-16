@@ -1,19 +1,47 @@
-.vid {
-    display: block;
-    margin: 0 auto;
-    width: 600px;
-    height: 500px;
-    background-color: black;
+.video-main {
+    background-color: rgb(50, 126, 174);
 }
 
-.info-container {
-    display: block;
+.vid-info{
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-direction: row; 
+    background-color: rgb(22, 22, 22);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 15px;
+    border-radius: 100px;
+    border-style: solid;
+    border-color: rgb(22, 22, 22);; 
+}
+
+.vid {
+    margin-top: 20px; 
+    margin-left:20px;
+    margin-bottom:20px;
+    border: 15px;
+    border-style: double;
+    border-color: rgb(50, 126, 174);
+    width: 450px;
+    height: 300px;
+    background-color: rgb(246, 246, 246); 
+}
+
+.info-container { 
+    align-self: center; 
     text-align: center;
-    margin: 0 auto;
-    background-color: azure;
+    border: 15px;
+    background-color: rgb(246, 246, 246); 
+    border-color: rgb(50, 126, 174);
+    border-style: double;
+    min-width: 200px;
+    min-height: 100px;
+    font-family: 'Squada One', sans-serif;
+    font-size: 16px;
+    font-weight: 550;
 }
 
 .video-feed {
     list-style: none;
-    background-color: rgb(53, 140, 195);
+    background-color: rgb(246, 246, 246);
 }

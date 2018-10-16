@@ -3,11 +3,18 @@
 }
 
 .info-header {
+    margin-top: 40px;
     text-align: center;
-    color: rgb(59, 154, 213);
+    color:  rgb(59, 154, 213);
     font-family: 'Squada One', sans-serif;
+    font-weight: 525;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 .pic-div {
@@ -32,8 +39,26 @@
     font-family: 'Squada One', sans-serif;
     text-align: center;
     color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(59, 154, 213);
+}
 .info {
     flex: 1;
     margin: .7em;

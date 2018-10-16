@@ -25,12 +25,11 @@ class AccountScreen extends React.Component {
         return  <div>
                     <Appheader />
                     <UserBar />
-                    <div> 
-                        <h2> 
-                            Welcome to Your Account! Here you can post your video's and Time's!
-                        </h2>
+                    <div className="header-main"> 
+                        <h1 className="account-header"> Welcome to Your Account </h1>
+                        <h2 className="header2">Here you can see and post your video's and time's</h2>
                         <NavLink to={`/users/${this.props.currentUser.id}/videos`}>
-                            <button className="videoscrbtn">Post Video</button>
+                            <button className="post-video">Submit your Latest Run</button>
                         </NavLink>
                     </div>
                     <div>

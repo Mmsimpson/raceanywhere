@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import './stylesheets/signupform.css'
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -30,50 +30,45 @@ class SignupForm extends React.Component {
             })
         }
         
-        return <div>
+        return <div className="main">
                     <form className="signup-form" onSubmit={(event) => {
                         event.preventDefault();
                         userSignUp()}}>
 
-                        <input 
-                            type="text" 
-                            className="signup-input" 
+                        <input className="input username"
+                            type="text"  
                             placeholder="Username"
                             value={this.state.username}
                             onChange={ (event)  => {
                                 this.setState({ username: event.target.value })
                                 }}
                         />
-                        <input
+                        <input className="input password"
                             type='password'
-                            className='signup-form-input'
                             placeholder='Password'
                             value={this.state.password}
                             onChange={ (event)  => {
                                 this.setState({ password: event.target.value })
                                 }}
                         />
-                        <input
+                        <input className="input email"
                             type='email'
-                            className='signup-form-input'
                             placeholder='Email'
                             value={this.state.email}
                             onChange={ (event)  => {
                                 this.setState({ email: event.target.value })
                                 }}
                         />
-                        <input
+                        <input className="input first"
                             type='text'
-                            className='signup-form-input'
                             placeholder='First Name'
                             value={this.state.first}
                             onChange={ (event)  => {
                                 this.setState({ first: event.target.value })
                                 }}
                         />
-                        <input
+                        <input className="input last"
                             type='text'
-                            className='signup-form-input'
                             placeholder='Last Name'
                             value={this.state.last}
                             onChange={ (event)  => {

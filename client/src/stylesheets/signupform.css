@@ -1,0 +1,71 @@
+.signup-form {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.username {
+    width:  200px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom:20px;
+    margin-top: 10px;
+}
+
+.password {
+    width:  200px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom:20px;
+    margin-top: 10px;
+}
+
+.email {
+    width:  200px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom:20px;
+    margin-top: 10px;
+}
+
+.first {
+    width:  200px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom:20px;
+    margin-top: 10px;
+}
+
+.last {
+    width:  200px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom:20px;
+    margin-top: 10px;
+}
+
+.input {
+    width:  200px;
+    font-size: 16px;
+    font-family: 'Squada One', sans-serif;
+}
+
+.signup-form-submit {
+    width: 200px;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 19px;
+    background-color: rgb(59, 154, 213);
+    color: azure;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-family: 'Squada One', sans-serif;
+}
+
+.signup-form-submit:hover {
+    color: rgb(108, 189, 238);
+}
