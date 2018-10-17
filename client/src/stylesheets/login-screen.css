@@ -1,0 +1,37 @@
+.login-main {
+    background-color: rgb(22, 22, 22); 
+}
+
+.login-container {
+    background-image: url('/images/login.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 95%;
+    background-position: center;
+    margin: auto;
+}
+
+.login-container-header {
+    display: flex;
+    align-content: center;
+    padding-top: 5%;
+    margin-bottom: 30px;
+}
+
+.login-header {
+    margin: auto; 
+    box-sizing: border-box;
+    background: rgb(0, 0, 0);
+    background: rgba(228, 228, 228, 0.776);
+    color:  rgb(93, 178, 232);
+    font-family: 'Squada One', sans-serif;
+    font-weight: 500;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    letter-spacing: 0.05em;
+    padding: 20px;
+}

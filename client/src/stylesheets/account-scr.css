@@ -1,4 +1,7 @@
 .header-main {
+    background-image: url('/images/signup.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     text-align: center;

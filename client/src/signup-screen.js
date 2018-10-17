@@ -6,12 +6,19 @@ import UserBar from './userBar.js';
 import './stylesheets/signupscreen.css'
 
 let SignupScreen = (props) =>
-   <div>
-       <AppHeader />
-       <UserBar />
-       <h2 className="signup-header">Welcome to Race Anywhere <br />Create an Account to get started!</h2>
-       <SignupForm history={props.history} />
-       <Footer />
+    <div>
+        <AppHeader />
+        <UserBar />
+        <div className="sign-main">
+            <div className="sign-container">
+                <div className="header-container">
+                    <h2 className="sign-title"> Discover the competition <br /> 
+                    Create an Account to get started!</h2>  
+                </div>
+                <SignupForm history={props.history} />
+            </div>
+        </div>
+        <Footer />
     </div>
 
 export default SignupScreen;
