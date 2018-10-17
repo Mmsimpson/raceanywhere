@@ -7,7 +7,6 @@ import { NavLink } from 'react-router-dom';
 import './stylesheets/account-scr.css';
 import Footer from './footer.js';
 
-// smart component
 class AccountScreen extends React.Component {
 
     componentDidMount() {

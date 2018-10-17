@@ -4,20 +4,19 @@
 
 body {
     background-color: #f1f1f1;
-    font-family: 'Squada One', sans-serif;
 }
 
 .videos {
-    max-width: 100%;
+    width: 100%;
 }
 
 .video-main {
-    max-width: 1000px;
-    margin: auto;
+    width: 30%;
+    margin: 1%;
 }
 
 .video-row {
-    margin: 8px -16px;
+    width: 100%;
 }
 
 .video-row,
@@ -26,8 +25,7 @@ body {
 }
 
 .video-column {
-    width: 25%;
-    float: left;
+    width: 100%;
 }
 
 .video-row:after {
@@ -37,21 +35,21 @@ body {
 }
 
 .content {
-    background-color: white;
+    border: 12px;
+    border-style: solid;
+    border-color: rgb(94, 94, 94);
+    width: 100%;
+    background-color: rgb(53, 140, 195);
+    font-family: 'Squada One', sans-serif;
+    letter-spacing: 0.08em;
+    font-weight: 500;
     padding: 10px;
+    text-align: center;
 }
 
-.video-row {
+.row-p {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.954);
     
-    /* display: flex; 
-    justify-content: space-evenly; 
-    flex-direction: row; 
-    background-color: rgb(22, 22, 22);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 15px;
-    border-radius: 100px;
-    border-style: solid;
-    border-color: rgb(22, 22, 22);;  */
 }
 
