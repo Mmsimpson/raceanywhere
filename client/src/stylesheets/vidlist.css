@@ -4,5 +4,10 @@ body {
 
 .video-feed {
     background-color: rgb(246, 246, 246);
-    padding: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

@@ -16,7 +16,6 @@ let Homepage = () =>
         <div className="pic-welcome"> 
             <div className="homeimg">
                 <img className="mainimg" src="/images/P7190100(2).jpg" />
-                <div className="welcome-text"> Welcome to Race Anywhere  </div>
             </div>    
         </div>
         <RaceInformation />

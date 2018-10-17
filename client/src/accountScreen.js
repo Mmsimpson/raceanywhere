@@ -32,9 +32,7 @@ class AccountScreen extends React.Component {
                             <button className="post-video">Submit your Latest Run</button>
                         </NavLink>
                     </div>
-                    <div>
-                        <VideoList videos={this.props.videos} />
-                    </div>
+                    <VideoList videos={this.props.videos} />
                     <Footer />
                 </div>
     }
