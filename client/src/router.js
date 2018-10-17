@@ -8,6 +8,7 @@ import WhyUs from './why-us';
 import AccountScreen from './accountScreen'
 import SubmitScreen from './videoSubmitScreen';
 import RacerProfileScreen from './racer_Profile_scr';
+import RiversScreen from './riversScreen'
 
 let Router = () =>
     <HashRouter>
@@ -15,6 +16,7 @@ let Router = () =>
             <Switch>
                 <Route exact path="/" component={Homepage} />
                 <Route exact path="/racervideos" component={RacerProfileScreen} />
+                <Route exact path="/racevenues" component={RiversScreen} />
                 <Route exact path="/login" component={LoginScreen} />
                 <Route exact path="/signup" component={SignupScreen} />
                 <Route exact path="/users/:id" component={AccountScreen} /> 

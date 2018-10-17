@@ -1,0 +1,48 @@
+.blue {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    color: rgb(94, 94, 94);
+    
+}
+
+.grey {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    background-color: rgb(53, 140, 195);
+    color: white;
+}
+
+h2 {
+    font-family: 'Squada One', sans-serif;
+    font-weight: 400;
+
+}
+
+p{
+    text-align: center;
+    width: 700px;
+    font-family: 'Squada One', sans-serif;
+    letter-spacing: normal;
+    font-size: 16px;
+    text-transform: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-bottom: 10px;
+}

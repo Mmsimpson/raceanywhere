@@ -13,6 +13,12 @@ let UserBar = (props) =>
             <NavLink to="/whyraceanywhere">
                 <button className="btn">Why Race Anywhere</button>
             </NavLink>
+            <NavLink to="/racevenues">
+                <button className="btn">Race Venues</button>
+            </NavLink>
+            <NavLink to="/racervideos">
+                <button className="btn">Recent Racers</button>
+            </NavLink>
             <NavLink to="/login">
                 <button className="btn">Login</button>
             </NavLink>
