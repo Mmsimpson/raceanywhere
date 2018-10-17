@@ -1,0 +1,49 @@
+.loginForm {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-username {
+    width:  200px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom:15px;
+    background: rgb(0, 0, 0);
+    background: rgba(228, 228, 228, 0.776);
+} 
+
+.pass {
+    width:  200px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom:30px;
+    margin-top: 15px;
+    background: rgb(0, 0, 0);
+    background: rgba(228, 228, 228, 0.776);
+}
+
+.loginbtn {
+    width: 200px;
+    margin: auto;
+    border-radius: 6px;
+    font-size: 19px;
+    background-color: rgb(59, 154, 213);
+    color: azure;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-family: 'Squada One', sans-serif;
+}
+.loginbtn:hover {
+    color: rgb(108, 189, 238);
+    
+}
+
+
+
+
