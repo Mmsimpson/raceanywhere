@@ -11,10 +11,10 @@ let VideoRow = (props) =>
                         preload="auto"
                         src={`${process.env.REACT_APP_FETCHREQ}/uploads/${props.video.video}`} >
                     </video>
-                    <p> {props.video.river} </p>
-                    <p> {props.video.riverlevel} </p>
-                    <p> {props.video.racetime} </p>
-                    <p> {props.video.classvalue} </p>   
+                    <p className="row-p"> {props.video.river} </p>
+                    <p className="row-p"> {props.video.riverlevel} </p>
+                    <p className="row-p"> {props.video.racetime} </p>
+                    <p className="row-p"> {props.video.classvalue} </p>   
                 </div>
             </div>
         </div>

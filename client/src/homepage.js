@@ -11,7 +11,6 @@ import './stylesheets/homepage.css';
 let Homepage = () => 
     <div className="main-container">
         <Appheader />
-        {/* <NavBar /> */}
         <UserBar />
         <div className="pic-welcome"> 
             <div className="homeimg">

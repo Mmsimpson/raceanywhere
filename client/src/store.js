@@ -5,7 +5,6 @@ let initialState = {
     currentUser: JSON.parse(localStorage.getItem('user')),
     videos: [],
     recentVideos: []
-
 };
 
 let store = createStore(
